@@ -7,8 +7,8 @@ import java.util.List;
 // Clase Singleton para gestionar la lista de pacientes y notificar a los observadores
 public class pacienteModelo {
     private static pacienteModelo instancia; // Instancia única del Singleton
-    private List<paciente> pacientes; // Lista que almacena los pacientes
-    private List<pacienteObserver> observadores; // Lista de observadores registrados
+    private final List<paciente> pacientes; // Lista que almacena los pacientes
+    private final List<pacienteObserver> observadores; // Lista de observadores registrados
 
     // Constructor privado para evitar instanciación externa
     private pacienteModelo() {
@@ -32,7 +32,7 @@ public class pacienteModelo {
 
     // Método para buscar un paciente por su ID
     public paciente buscarPaciente(String id) {
-        for paciente p : pacientes) { // Recorre la lista de pacientes
+        for (paciente p : pacientes) { // Recorre la lista de pacientes
             if (p.getId().equals(id)) { // Si el ID coincide, devuelve el paciente
                 return p;
             }
