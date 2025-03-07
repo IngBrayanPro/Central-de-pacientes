@@ -36,6 +36,13 @@ public class paciente {
     // Método toString para representar un paciente como texto
     @Override
     public String toString() {
-        return "Paciente{" + "id='" + id + '\'' + ", nombre='" + nombre + '\'' + ", edad=" + edad + ", clinica='" + clinica + '\'' + '}';
+        return String.format(
+                "Paciente \n" +
+                        "  ID: %s \n" +
+                        "  Nombre: %s \n" +
+                        "  Edad: %d \n" +
+                        "  Clínica: %s \n" +
+                        "}",
+                id, nombre, edad, clinica);
     }
 }
