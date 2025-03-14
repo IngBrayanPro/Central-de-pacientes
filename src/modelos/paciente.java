@@ -1,5 +1,5 @@
 // Paquete principal del proyecto
-package src.model;
+package modelos;
 
 // Clase que representa un paciente en el sistema
 public class paciente {
